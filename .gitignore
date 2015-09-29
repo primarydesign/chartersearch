@@ -1,0 +1,7 @@
+.*
+~*
+*.wpseobak
+server.json
+node_modules/
+doucments/archive/
+!.gitignore
