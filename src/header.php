@@ -21,8 +21,9 @@
     $header_style_class = ' center ';
   }
 ?>
-
+<!-- SITE-HEADER -->
 <div class="fullcontainer" style="width: 100%; position: fixed; z-index: 55;">
+  <!-- header-container -->
   <div id="header-container" class="content-width <?php echo $header_style_class; ?>" style="position: initial; left: 0; margin: 0px auto; right: 0;">
     <!-- Logo -->
     <div id="logo-wrapper">
@@ -81,13 +82,17 @@
         <input id="header-search-input" name="s" type="text" placeholder="<?php echo esc_attr(__('Type and hit enter to search ...', 'uxbarn')); ?>" value="<?php echo trim( get_search_query() ); ?>" />
       </form>
     </div>
-  </div><!-- End id="header-container" -->
+  </div>
+  <!-- end::header-container -->
 </div>
+<!-- END::SITE-HEADER -->
 
 <?php
   $no_header_image_class = '';
   $slider_header_footer_style = uxbarn_get_slider_header_footer_style();
 ?>
+
+<!-- HOME-SLIDER -->
 <?php if(is_front_page() || uxbarn_is_frontpage_child() && !is_search() && !is_single()) : // Use home slider on front page ?>
   <?php
     $slider_type = ot_get_option('uxbarn_to_setting_select_slider');
@@ -181,6 +186,9 @@
       echo '</div>'; // close id="uxb-layerslider-container"
     ?>
   <?php endif; // END: if($slider_type == 'basic-slider') ?>
+<!-- END::HOME-SLIDER -->
+
+<!-- PAGE-SLIDER -->
 <?php else : // For other pages, use header image ?>
   <?php
     $header_image_img = '';
@@ -264,18 +272,23 @@
     <div id="no-header-image-wrapper"></div>
   <?php endif; // END: if ($header_image_img != '') ?>
 <?php endif; // END: header image case ?>
+<!-- END::PAGE-SLIDER -->
+
+<!-- PAGE-CONTENT -->
 <div id="content-container" class="content-width <?php echo $no_header_image_class; ?>">
-<?php if(!is_front_page() && !uxbarn_is_frontpage_child() || is_search()) : ?>
-  <?php if(ot_get_option('uxbarn_to_setting_display_breadcrumb')) : ?>
-    <!-- Breadcrumbs -->
-    <div class="row">
-      <div class="breadcrumbs-wrapper uxb-col large-12 columns for-nested">
-        <span class="text"><?php _e('You are here:', 'uxbarn'); ?></span>
-        <?php uxbarn_render_breadcrumbs(); ?>
+  <?php if(!is_front_page() && !uxbarn_is_frontpage_child() || is_search()) : ?>
+    <?php if(ot_get_option('uxbarn_to_setting_display_breadcrumb')) : ?>
+      <!-- Breadcrumbs -->
+      <div class="row">
+        <div class="breadcrumbs-wrapper uxb-col large-12 columns for-nested">
+          <span class="text"><?php _e('You are here:', 'uxbarn'); ?></span>
+          <?php uxbarn_render_breadcrumbs(); ?>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
   <?php endif; ?>
-<?php endif; ?>
-<!-- Page Intro -->
-<?php get_template_part('template-intro'); ?>
-<div id="inner-content-container">
+  <!-- page-intro -->
+  <?php get_template_part('template-intro'); ?>
+  <div id="inner-content-container">
+  <!-- disc::page-intro -->
+<!-- DISC::PAGE-CONTENT -->
