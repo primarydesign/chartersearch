@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var argv = require('yargs').argv;
 var ftp = require('vinyl-ftp');
 var server = require('./server.json');
+var $ = require('gulp-load-plugins')();
 
 /* environment configuration */
 var PRO = !!argv.production;
@@ -13,13 +14,17 @@ gulp.task('deploy', function() {
     user: server[ENV].username,
     password: server[ENV].password,
     port: server[ENV].port || 21,
-  }), globs = [''];
-  return gulp.src(globs, {base: './dist/', buffer: false})
+  }), globs = ['./app/**/*'];
+  return gulp.src(globs, {base: './app/', buffer: false})
     .pipe(conn.newer(server[ENV].path))
     .pipe(conn.dest(server[ENV].path));
 });
 
 gulp.task('style', function() {
-  return gulp.src('./src/scss/**/*.scss')
-    .pipe($.autoprefixer)
+  return gulp.src('./src/scss/index.scss')
+    .pipe($.cssGlobbing({extensions:['.scss']}))
+    .pipe($.sass({outputStyle:'nested'}))
+    .pipe($.autoprefixer())
+    .pipe($.rename('style.css'))
+    .pipe(gulp.dest('./app/'));
 });

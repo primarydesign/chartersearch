@@ -15,8 +15,13 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-css-globbing": "^0.1.8",
     "gulp-if": "^1.2.5",
     "gulp-imagemin": "^2.3.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
     "lazypipe": "^1.0.1",
     "vinyl-ftp": "^0.4.5",
     "yargs": "^3.26.0"
