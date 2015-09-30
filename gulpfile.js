@@ -31,7 +31,7 @@ gulp.task('style', function() {
 
 gulp.task('php', function() {
   return gulp.src('./src/**/*.php')
-    .pipe()
+    .pipe(gulp.dest('./app/'));
 });
 
 gulp.task('image', function() {
