@@ -52,7 +52,7 @@
           <div id="mobile-logo-wrapper">
             <div id="mobile-logo">
               <a href="<?php echo home_url(); ?>">
-                <img src="<?php $uploads = wp_upload_dir(); echo $uploads['baseurl']; ?>/2013/08/chartersearch-logo-footer1.png" alt="<?php get_bloginfo('name') ?>" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-small-color.svg" alt="<?php echo get_bloginfo('name'); ?>" />
               </a>
               <p><?php bloginfo('description'); ?></p>
             </div>
