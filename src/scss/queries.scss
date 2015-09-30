@@ -31,10 +31,19 @@ $only-large: "only screen and (min-width: #{$large-min})";
 	}
 }
 @media #{$medium-only} {
-
+  #cs-logo-wrapper {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 275px;
+  }
+  #cs-logo-wrapper img {
+    margin: 0;
+  }
 }
 @media #{$only-large} {
-
+  #cs-logo-wrapper {
+    width: 275px;
+  }
 }
 
 

@@ -31,7 +31,7 @@
       <div id="logo">
         <a href="<?php echo home_url(); ?>">
           <?php
-            $logo_url = get_option('uxbarn_sc_header_site_logo');
+            $logo_url = get_stylesheet_directory_uri() . "/images/logo-full-color.svg";
             if($logo_url) {
               echo '<img src="' . $logo_url . '" alt="' . get_bloginfo('name') . '" />';
             } else {

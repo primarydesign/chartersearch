@@ -669,6 +669,18 @@ div.widget-item div.uxb-col ul li span.post-date {
     padding-right: 20px;
     padding-top: 40px; } }
 
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #cs-logo-wrapper {
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 275px; }
+  #cs-logo-wrapper img {
+    margin: 0; } }
+
+@media only screen and (min-width: 960px) {
+  #cs-logo-wrapper {
+    width: 275px; } }
+
 @media (min-width: 767px) {
   #jets1, #jets2, #jets3, #jets4 {
     background-size: 100% auto; } }
