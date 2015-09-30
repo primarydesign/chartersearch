@@ -15,7 +15,9 @@ $only-large: "only screen and (min-width: #{$large-min})";
 
 
 @media #{$only-small} {
-
+  #header-image-container {
+    margin-top: 50px;
+  }
 }
 @media #{$from-medium} {
 

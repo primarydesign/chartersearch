@@ -15,6 +15,7 @@
   <?php wp_head(); ?>
 </head>
 <body id="theme-body" <?php body_class(); ?>>
+<div class="body-wrapper">
 <?php
   $header_style_class = '';
   if(ot_get_option('uxbarn_to_setting_header_style') == 'center') {

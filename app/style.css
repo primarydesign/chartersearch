@@ -21,6 +21,9 @@ body {
 .gray-text {
   color: #666c71; }
 
+.body-wrapper {
+  overflow: auto; }
+
 /***** Page Intro *****/
 #intro-line hr {
   border-top: 1px solid #002b7f; }
@@ -654,6 +657,10 @@ div.widget-item div.uxb-col ul li span.post-date {
 
 .ls-v5 .ls-nav-prev, .ls-v5 .ls-nav-next {
   width: 45px !important; }
+
+@media only screen and (max-width: 767px) {
+  #header-image-container {
+    margin-top: 50px; } }
 
 @media only screen and (max-width: 959px) {
   #cs-logo-wrapper {
