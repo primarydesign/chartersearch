@@ -1,3 +1,36 @@
+$not-large: "only screen and (max-width: 959px)";
+$all-mobile: "only screen and (max-width: 767px)";
+$medium: "only screen and (min-wdith: 768px) and (max-width: 959px)";
+
+$small-max: 767px;
+$medium-min: 768px;
+$medium-max: 959px;
+$large-min: 960px;
+"only screen and (max-width: #{$})";
+$only-small: "only screen and (max-width: #{$small-max})";
+$from-medium: "only screen and (min-width: #{$medium-min})";
+$upto-medium: "only screen and (max-width: #{$medium-max})";
+$medium-only: "only screen and (min-width: #{$medium-min}) and (max-width: #{$medium-max})";
+$only-large: "only screen and (min-width: #{$large-min})";
+
+
+@media #{$only-small} {
+
+}
+@media #{$from-medium} {
+
+}
+@media #{$upto-medium} {
+
+}
+@media #{$medium-only} {
+
+}
+@media #{$only-large} {
+
+}
+
+
 @media (min-width:767px){
 #jets1, #jets2, #jets3, #jets4{
  -webkit-background-size: 100% auto;
