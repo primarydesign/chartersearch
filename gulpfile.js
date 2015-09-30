@@ -28,3 +28,16 @@ gulp.task('style', function() {
     .pipe($.rename('style.css'))
     .pipe(gulp.dest('./app/'));
 });
+
+gulp.task('php', function() {
+  return gulp.src('./src/**/*.php')
+    .pipe()
+});
+
+gulp.task('image', function() {
+  return gulp.src('./src/images/**/*')
+    .pipe($.imagemin({
+      progressive: true
+    }))
+    .pipe(gulp.dest('./app/images/'))
+});
