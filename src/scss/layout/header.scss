@@ -98,7 +98,7 @@ font-size:1.125em; 	/* 18/16 */
   line-height: 50px !important;
 }
 @media (max-width: 767px) {
-  #logo-wrapper {
+  #cs-logo-wrapper {
     display: none !important;
   }
   #mobile-menu {
@@ -107,4 +107,15 @@ font-size:1.125em; 	/* 18/16 */
   #uxb-layerslider-container {
     padding-top: 45px;
   }
+}
+
+#header-container.center #cs-logo-wrapper {
+	float: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 42px;
+}
+#cs-logo-wrapper {
+	float: left;
+	padding: 60px 40px 17px;
 }

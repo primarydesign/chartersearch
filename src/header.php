@@ -26,7 +26,7 @@
   <!-- header-container -->
   <div id="header-container" class="content-width <?php echo $header_style_class; ?>" style="position: initial; left: 0; margin: 0px auto; right: 0;">
     <!-- Logo -->
-    <div id="logo-wrapper">
+    <div id="cs-logo-wrapper">
       <div id="logo">
         <a href="<?php echo home_url(); ?>">
           <?php

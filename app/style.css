@@ -592,12 +592,22 @@ div#contact-details p a:hover {
   line-height: 50px !important; }
 
 @media (max-width: 767px) {
-  #logo-wrapper {
+  #cs-logo-wrapper {
     display: none !important; }
   #mobile-menu {
     top: 0 !important; }
   #uxb-layerslider-container {
     padding-top: 45px; } }
+
+#header-container.center #cs-logo-wrapper {
+  float: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 42px; }
+
+#cs-logo-wrapper {
+  float: left;
+  padding: 60px 40px 17px; }
 
 #sidebar-wrapper h4 {
   font-family: 'PT Sans', sans-serif !important;
@@ -644,6 +654,13 @@ div.widget-item div.uxb-col ul li span.post-date {
 
 .ls-v5 .ls-nav-prev, .ls-v5 .ls-nav-next {
   width: 45px !important; }
+
+@media only screen and (max-width: 959px) {
+  #cs-logo-wrapper {
+    float: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px; } }
 
 @media (min-width: 767px) {
   #jets1, #jets2, #jets3, #jets4 {

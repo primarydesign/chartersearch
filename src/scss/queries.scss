@@ -6,7 +6,7 @@ $small-max: 767px;
 $medium-min: 768px;
 $medium-max: 959px;
 $large-min: 960px;
-"only screen and (max-width: #{$})";
+
 $only-small: "only screen and (max-width: #{$small-max})";
 $from-medium: "only screen and (min-width: #{$medium-min})";
 $upto-medium: "only screen and (max-width: #{$medium-max})";
@@ -21,7 +21,12 @@ $only-large: "only screen and (min-width: #{$large-min})";
 
 }
 @media #{$upto-medium} {
-
+  #cs-logo-wrapper {
+		float: none;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 40px;
+	}
 }
 @media #{$medium-only} {
 
