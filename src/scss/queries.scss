@@ -62,7 +62,7 @@ $only-large: "only screen and (min-width: #{$large-min})";
 		padding-right: 20px;
 		padding-top: 40px;
 	}
-  [id*="jets"] > .hover-effect {
+  .hover-effect {
     opacity: 1 !important;
     background-color: rgba(93, 142, 203, 0.6) !important;
   }
