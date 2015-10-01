@@ -33,11 +33,38 @@ gulp.task('php', function() {
   return gulp.src('./src/**/*.php')
     .pipe(gulp.dest('./app/'));
 });
-
 gulp.task('image', function() {
   return gulp.src('./src/images/**/*')
     .pipe($.imagemin({
       progressive: true
     }))
     .pipe(gulp.dest('./app/images/'))
+});
+
+gulp.task('deploy:css', ['style'], function(){
+  var conn = ftp.create({
+    host: server[ENV].host,
+    user: server[ENV].username,
+    password: server[ENV].password,
+    port: server[ENV].port || 21,
+  }), globs = ['./app/**/*'];
+  return gulp.src(globs, {base: './app/', buffer: false})
+    .pipe(conn.newer(server[ENV].path))
+    .pipe(conn.dest(server[ENV].path));
+});
+gulp.task('deploy:php', ['php'], function(){
+  var conn = ftp.create({
+    host: server[ENV].host,
+    user: server[ENV].username,
+    password: server[ENV].password,
+    port: server[ENV].port || 21,
+  }), globs = ['./app/**/*'];
+  return gulp.src(globs, {base: './app/', buffer: false})
+    .pipe(conn.newer(server[ENV].path))
+    .pipe(conn.dest(server[ENV].path));
+});
+
+gulp.task('watch', function() {
+  gulp.watch('./src/scss/**/*', ['deploy:css']);
+  gulp.watch('./src/*.php', ['deploy:php']);
 });

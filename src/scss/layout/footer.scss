@@ -45,3 +45,52 @@
 #scrollUp {
   background: #5d8ecb;
   }
+#footer-content {
+  text-align: center;
+  font-size: 0;
+}
+.footer-column {
+  // border: 1px solid salmon;
+  display: inline-block;
+  float: none !important;
+  margin: 0 2.5%;
+  vertical-align: top;
+  width: 40%;
+  font-size: 1rem;
+  &:first-child {
+    text-align: left;
+  }
+  &:last-child {
+    text-align: right;
+  }
+}
+.footer-logo {
+  width: 220px;
+}
+.fine-print, .legal-print {
+  margin: 20px 0 0;
+  font-size: .8rem;
+  letter-spacing: .025em;
+}
+.legal-print {margin-top: 12px;}
+
+.footer-sitemap {
+  #menu-main-nav {
+    display: inline-block;
+    margin: 0;
+    text-align: left;
+    ul, ol, li {margin:0 !important;padding:0 !important;}
+    // li {margin:}
+  }
+  .menu-item a {
+    display: inline-block;
+    font-size: .8rem;
+    text-decoration: none;
+    width: 100%;
+    &:hover {
+      color: #8dafda !important;
+    }
+  }
+
+}
+// .testimonial-wrapper {display: none !important;}

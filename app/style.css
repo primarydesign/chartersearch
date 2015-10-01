@@ -499,6 +499,49 @@ div#contact-details p a:hover {
 #scrollUp {
   background: #5d8ecb; }
 
+#footer-content {
+  text-align: center;
+  font-size: 0; }
+
+.footer-column {
+  display: inline-block;
+  float: none !important;
+  margin: 0 2.5%;
+  vertical-align: top;
+  width: 40%;
+  font-size: 1rem; }
+  .footer-column:first-child {
+    text-align: left; }
+  .footer-column:last-child {
+    text-align: right; }
+
+.footer-logo {
+  width: 220px; }
+
+.fine-print, .legal-print {
+  margin: 20px 0 0;
+  font-size: .8rem;
+  letter-spacing: .025em; }
+
+.legal-print {
+  margin-top: 12px; }
+
+.footer-sitemap #menu-main-nav {
+  display: inline-block;
+  margin: 0;
+  text-align: left; }
+  .footer-sitemap #menu-main-nav ul, .footer-sitemap #menu-main-nav ol, .footer-sitemap #menu-main-nav li {
+    margin: 0 !important;
+    padding: 0 !important; }
+
+.footer-sitemap .menu-item a {
+  display: inline-block;
+  font-size: .8rem;
+  text-decoration: none;
+  width: 100%; }
+  .footer-sitemap .menu-item a:hover {
+    color: #8dafda !important; }
+
 /***** Header Menu *****/
 #menu-wrapper {
   min-height: 65px; }
@@ -658,9 +701,31 @@ div.widget-item div.uxb-col ul li span.post-date {
 .ls-v5 .ls-nav-prev, .ls-v5 .ls-nav-next {
   width: 45px !important; }
 
+@media only screen and (max-width: 500px) {
+  #footer-content .contact-info i {
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; } }
+
 @media only screen and (max-width: 767px) {
   #header-image-container {
-    margin-top: 50px; } }
+    margin-top: 50px; }
+  .footer-column {
+    display: block;
+    margin: 0 0 30px;
+    text-align: center !important;
+    width: 100%; }
+    .footer-column:last-child {
+      margin-bottom: 30px; }
+  .footer-information p {
+    height: auto !important;
+    line-height: 22px !important;
+    margin: 0 !important; }
+  .footer-information .social-icons {
+    margin-bottom: 12px !important; }
+  .footer-sitemap li {
+    text-align: center !important; } }
 
 @media only screen and (max-width: 959px) {
   #cs-logo-wrapper {
@@ -682,7 +747,9 @@ div.widget-item div.uxb-col ul li span.post-date {
 
 @media only screen and (min-width: 960px) {
   #cs-logo-wrapper {
-    width: 275px; } }
+    width: 275px; }
+  .footer-sitemap li a {
+    font-size: 0.9rem !important; } }
 
 @media (min-width: 767px) {
   #jets1, #jets2, #jets3, #jets4 {

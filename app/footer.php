@@ -29,15 +29,28 @@
           <div id="footer-content-container">
             <div id="footer-content-inner-wrapper" class="content-width">
               <div id="footer-content" class="row top-margin">
-                <?php
-                  $col_num = 12 / $footer_widget_area_columns;
-                  for($i = 1; $i <= $footer_widget_area_columns; $i++) {
-                  $sidebar_id = 'footer-widget-area-' . $i;
-                ?>
-                <div class="uxb-col large-<?php echo $col_num; ?> columns less-padding">
-                  <?php dynamic_sidebar($sidebar_id); ?>
+                <div class="footer-column footer-information">
+                  <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri();?>/images/logo-small-white.svg" alt="CharterSearch logo">
+                  <p class="footer-quote"><a href="contact-us">CONTACT US FOR A QUOTE TODAY</a></p>
+                  <p class="contact-info">(800) 270-8790 <i>|</i> <a href="mailto: info@CharterSearch.com">info@CharterSearch.com</a></p>
+                  <p class="social-icons">
+                    <?php $uploads = wp_upload_dir(); ?>
+                    <a href="http://www.twitter.com/gochartersearch" target="_blank"><img class="twittericon" src="<?php echo $uploads['baseurl']?>/2013/08/chartersearchtwitter.png" alt="CharterSearch Twitter"></a>
+                  </p>
+                  <p class="fine-print">CharterSearch is an Air Charter Arrangement Service Company and is not a direct or indirect "Air Carrier". CharterSearch does not own or operate any aircraft.  All chartered flights arranged by CharterSearch are operated byFAR Part 121 or FAR Part 135 air carriers who shall maintain full operational control of charter flights at all times.</p>
+                  <p class="legal-print">© 2014 New England Flight Watch, LLC dba CharterSearch<br/>All Rights Reserved.</p>
                 </div>
-                <?php } ?>
+                <div class="footer-column">
+                  <?php $navargs = array(
+                    'theme_location'=>'header-menu',
+                    'container_class'=>'footer-sitemap',
+                    'container_id'=>'footer-sitemap',
+                    'container'=>'nav',
+                    'menu_class'=>'',
+                    'menu_id'=>'',
+                    'fallback_cb'=>false);
+                    echo wp_nav_menu($navargs); ?>
+                </div>
               </div><!-- end::footer-content -->
             </div><!-- end::footer-content-inner-wrapper -->
           </div><!-- end::footer-content-container -->
