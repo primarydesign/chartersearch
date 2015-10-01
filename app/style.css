@@ -667,7 +667,10 @@ div.widget-item div.uxb-col ul li span.post-date {
     float: none;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 40px; } }
+    padding-top: 40px; }
+  [id*="jets"] > .hover-effect {
+    opacity: 1 !important;
+    background-color: rgba(93, 142, 203, 0.6) !important; } }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   #cs-logo-wrapper {
