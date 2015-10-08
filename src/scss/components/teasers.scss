@@ -1,0 +1,16 @@
+.lp-teaser {
+   border: 2px solid salmon;
+}
+.lp-teaser--title {
+   color: $orange !important;
+   font-size: 2rem !important;
+}
+
+
+.lp-teaser-slim {
+   @extend .lp-teaser;
+}
+
+.lp-teaser-grand {
+   @extend .lp-teaser;
+}

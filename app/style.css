@@ -24,6 +24,13 @@ body {
 .body-wrapper {
   overflow: auto; }
 
+body {
+  background-image: url("images/background-swirl.jpg") !important;
+  background-size: cover; }
+
+body.home #intro h1 {
+  display: none; }
+
 /***** Page Intro *****/
 #intro-line hr {
   border-top: 1px solid #002b7f; }
@@ -701,6 +708,13 @@ div.widget-item div.uxb-col ul li span.post-date {
 .ls-v5 .ls-nav-prev, .ls-v5 .ls-nav-next {
   width: 45px !important; }
 
+.lp-teaser, .lp-teaser-slim, .lp-teaser-grand {
+  border: 2px solid salmon; }
+
+.lp-teaser--title {
+  color: #f26922 !important;
+  font-size: 2rem !important; }
+
 @media only screen and (max-width: 500px) {
   #footer-content .contact-info i {
     display: block;
@@ -813,10 +827,6 @@ div.widget-item div.uxb-col ul li span.post-date {
     padding: 24px 13px !important; }
   .memberbox {
     min-height: 0px; } }
-
-body {
-  background-image: url("../../uploads/2013/08/background-revised.jpg") !important;
-  background-size: cover; }
 
 #uxb-layerslider-container {
   min-height: 0px !important; }

@@ -13,3 +13,12 @@ body{
 .body-wrapper {
   overflow: auto;
 }
+
+body{
+	background-image: url("images/background-swirl.jpg") !important;
+	background-size: cover;
+}
+
+body.home #intro {
+   h1 { display: none; }
+}
